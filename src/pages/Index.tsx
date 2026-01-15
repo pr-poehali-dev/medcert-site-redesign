@@ -4,115 +4,96 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import Icon from '@/components/ui/icon';
 
-const services = [
+const menuItems = [
   {
-    title: 'Справка 086/у',
-    description: 'Для поступления в учебное заведение',
-    price: '2 500 ₽',
-    icon: 'GraduationCap'
+    id: 'spravki',
+    title: 'СПРАВКИ',
+    icon: 'FileText',
+    submenu: [
+      { title: 'Справка 086/у', link: '#' },
+      { title: 'Справка для ГИБДД', link: '#' },
+      { title: 'Справка 095/у', link: '#' },
+      { title: 'Справка в бассейн', link: '#' },
+      { title: 'Справка на оружие', link: '#' },
+      { title: 'Справка для работы', link: '#' },
+      { title: 'Справка в спортзал', link: '#' },
+      { title: 'Справка на санаторий', link: '#' }
+    ]
   },
   {
-    title: 'Медицинская книжка',
-    description: 'Оформление и продление',
-    price: '3 500 ₽',
-    icon: 'BookOpen'
+    id: 'medknijki',
+    title: 'МЕДКНИЖКИ',
+    icon: 'BookOpen',
+    submenu: [
+      { title: 'Личная медкнижка', link: '#' },
+      { title: 'Для общепита', link: '#' },
+      { title: 'Для торговли', link: '#' },
+      { title: 'Для медработников', link: '#' },
+      { title: 'Для образования', link: '#' },
+      { title: 'Продление медкнижки', link: '#' }
+    ]
   },
   {
-    title: 'Справка для ГИБДД',
-    description: 'Для получения водительских прав',
-    price: '2 000 ₽',
-    icon: 'Car'
+    id: 'services',
+    title: 'ДОП. УСЛУГИ',
+    icon: 'Briefcase',
+    submenu: [
+      { title: 'Медосмотр', link: '#' },
+      { title: 'Анализы', link: '#' },
+      { title: 'Флюорография', link: '#' },
+      { title: 'Прививки', link: '#' },
+      { title: 'Консультации врачей', link: '#' }
+    ]
   },
   {
-    title: 'Справка 095/у',
-    description: 'Для студентов и абитуриентов',
-    price: '1 500 ₽',
-    icon: 'FileText'
+    id: 'info',
+    title: 'ИНФОРМАЦИЯ',
+    icon: 'Info',
+    submenu: [
+      { title: 'О компании', link: '#' },
+      { title: 'Лицензии', link: '#' },
+      { title: 'Цены', link: '#' },
+      { title: 'Отзывы', link: '#' }
+    ]
   },
   {
-    title: 'Справка в бассейн',
-    description: 'Медицинский допуск',
-    price: '800 ₽',
-    icon: 'Droplets'
-  },
-  {
-    title: 'Справка на оружие',
-    description: 'Для получения лицензии',
-    price: '3 000 ₽',
-    icon: 'Shield'
+    id: 'contacts',
+    title: 'КОНТАКТЫ',
+    icon: 'MapPin',
+    link: '#contacts'
   }
 ];
 
 const advantages = [
   {
-    title: 'Быстрое оформление',
-    description: 'Получите справку в день обращения',
-    icon: 'Zap'
+    title: 'Безопасность',
+    description: 'Конфиденциальность и безопасность при заказе любых услуг',
+    icon: 'Shield'
   },
   {
-    title: 'Без очередей',
-    description: 'Удобная запись на удобное время',
-    icon: 'Clock'
-  },
-  {
-    title: 'Официальные документы',
-    description: 'Все справки с печатью и подписью врача',
+    title: 'Легально',
+    description: 'Легальные и корректно оформленные справки',
     icon: 'BadgeCheck'
   },
   {
-    title: 'Доступные цены',
-    description: 'Честные цены без скрытых платежей',
-    icon: 'Wallet'
-  }
-];
-
-const steps = [
-  {
-    number: '1',
-    title: 'Оставьте заявку',
-    description: 'Заполните форму или позвоните нам',
-    icon: 'Phone'
+    title: 'Большой выбор',
+    description: 'Все виды справок и медкнижек',
+    icon: 'Library'
   },
   {
-    number: '2',
-    title: 'Консультация',
-    description: 'Менеджер свяжется и уточнит детали',
-    icon: 'MessageCircle'
+    title: 'Быстрая доставка',
+    description: 'Оперативно доставляем справки по всей России',
+    icon: 'Truck'
   },
   {
-    number: '3',
-    title: 'Посещение клиники',
-    description: 'Приходите в удобное время',
-    icon: 'Building2'
-  },
-  {
-    number: '4',
-    title: 'Получение справки',
-    description: 'Забирайте готовый документ',
+    title: 'Подлинность',
+    description: 'Все справки оригинальные, 100% проходят проверку',
     icon: 'CheckCircle2'
   }
 ];
 
-const reviews = [
-  {
-    name: 'Анна Петрова',
-    text: 'Очень быстро оформили медкнижку для работы. Никаких очередей, всё чётко и профессионально!',
-    rating: 5
-  },
-  {
-    name: 'Дмитрий Соколов',
-    text: 'Нужна была срочно справка для ГИБДД. Сделали за один день! Рекомендую.',
-    rating: 5
-  },
-  {
-    name: 'Елена Иванова',
-    text: 'Отличный сервис! Помогли с продлением медкнижки, все документы в порядке.',
-    rating: 5
-  }
-];
-
 export default function Index() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
   const [formData, setFormData] = useState({ name: '', phone: '' });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -121,265 +102,164 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Icon name="Cross" className="text-white" size={24} />
+    <div className="min-h-screen bg-gradient-to-br from-primary/5 to-primary/10">
+      <div className="fixed top-0 left-0 w-[160px] h-full bg-gradient-to-b from-primary via-primary to-primary/90 z-40">
+        <div className="absolute top-0 left-0 right-0 h-24 bg-white flex items-center justify-center">
+          <div className="flex flex-col items-center">
+            <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-1">
+              <Icon name="Cross" className="text-white" size={28} />
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-primary">МедДокумент</h1>
-              <p className="text-xs text-muted-foreground">Справки и медкнижки</p>
-            </div>
+            <span className="text-xs font-bold text-foreground uppercase">МедДокумент</span>
           </div>
-
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">
-              Услуги
-            </a>
-            <a href="#advantages" className="text-sm font-medium hover:text-primary transition-colors">
-              Преимущества
-            </a>
-            <a href="#how-to-order" className="text-sm font-medium hover:text-primary transition-colors">
-              Как заказать
-            </a>
-            <a href="#reviews" className="text-sm font-medium hover:text-primary transition-colors">
-              Отзывы
-            </a>
-            <Button>
-              <Icon name="Phone" className="mr-2" size={16} />
-              +7 (495) 123-45-67
-            </Button>
-          </nav>
-
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <Icon name={menuOpen ? 'X' : 'Menu'} size={24} />
-          </Button>
         </div>
 
-        {menuOpen && (
-          <nav className="md:hidden bg-white border-t py-4 animate-fade-in">
-            <div className="container mx-auto px-4 flex flex-col gap-3">
+        <nav className="mt-24 pt-8">
+          {menuItems.map((item) => (
+            <div
+              key={item.id}
+              className="relative"
+              onMouseEnter={() => setHoveredMenu(item.id)}
+              onMouseLeave={() => setHoveredMenu(null)}
+            >
               <a
-                href="#services"
-                className="py-2 text-sm font-medium hover:text-primary transition-colors"
-                onClick={() => setMenuOpen(false)}
+                href={item.link || '#'}
+                className="flex items-center gap-3 px-6 py-5 text-white hover:bg-white/10 transition-colors duration-200 cursor-pointer border-b border-white/10"
               >
-                Услуги
+                <Icon name={item.icon} size={28} className="flex-shrink-0" />
+                <span className="text-sm font-semibold uppercase tracking-wide">{item.title}</span>
+                {item.submenu && <Icon name="ChevronRight" size={18} className="ml-auto" />}
               </a>
-              <a
-                href="#advantages"
-                className="py-2 text-sm font-medium hover:text-primary transition-colors"
-                onClick={() => setMenuOpen(false)}
-              >
-                Преимущества
-              </a>
-              <a
-                href="#how-to-order"
-                className="py-2 text-sm font-medium hover:text-primary transition-colors"
-                onClick={() => setMenuOpen(false)}
-              >
-                Как заказать
-              </a>
-              <a
-                href="#reviews"
-                className="py-2 text-sm font-medium hover:text-primary transition-colors"
-                onClick={() => setMenuOpen(false)}
-              >
-                Отзывы
-              </a>
-              <Button className="w-full">
-                <Icon name="Phone" className="mr-2" size={16} />
-                +7 (495) 123-45-67
-              </Button>
-            </div>
-          </nav>
-        )}
-      </header>
 
-      <section className="pt-32 pb-16 bg-gradient-to-br from-blue-50 to-green-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Медицинские справки <br />
-              <span className="text-primary">быстро и официально</span>
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Оформление всех видов медицинских справок и медкнижек в день обращения. 
-              Лицензированная медицинская организация с опытом работы более 10 лет.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" className="px-8">
-                <Icon name="FileText" className="mr-2" size={20} />
-                Заказать справку
-              </Button>
-              <Button size="lg" variant="outline" className="px-8">
-                <Icon name="Phone" className="mr-2" size={20} />
-                Позвонить
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-center">О наших услугах</h3>
-            <div className="prose prose-lg max-w-none text-muted-foreground">
-              <p className="mb-4">
-                Наша медицинская клиника специализируется на оформлении медицинских справок любой сложности. 
-                Мы понимаем, как важно получить документ быстро и без лишних хлопот, поэтому создали максимально 
-                удобную систему работы.
-              </p>
-              <p className="mb-4">
-                Все справки и медкнижки оформляются в соответствии с действующим законодательством РФ, 
-                имеют все необходимые печати и подписи лицензированных врачей. Наши документы принимаются 
-                во всех государственных и частных учреждениях.
-              </p>
-              <p>
-                Помимо первичного оформления, мы предлагаем услуги по продлению и переоформлению 
-                существующих медицинских документов. Работаем как с физическими, так и с юридическими лицами.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold mb-4 text-center">Наши услуги</h3>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Полный спектр медицинских справок с официальным оформлением
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="hover:shadow-lg transition-shadow duration-300 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-6">
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                    <Icon name={service.icon} className="text-primary" size={28} />
-                  </div>
-                  <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
-                  <p className="text-muted-foreground mb-4 text-sm">{service.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-primary">{service.price}</span>
-                    <Button size="sm" variant="outline">
-                      Заказать
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <p className="text-sm text-muted-foreground">
-              * Срочное оформление за 2 часа — дополнительно 1 000 ₽
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="advantages" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold mb-12 text-center">Наши преимущества</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {advantages.map((advantage, index) => (
-              <div
-                key={index}
-                className="text-center animate-fade-in"
-                style={{ animationDelay: `${index * 0.15}s` }}
-              >
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name={advantage.icon} className="text-accent" size={32} />
-                </div>
-                <h4 className="text-xl font-semibold mb-2">{advantage.title}</h4>
-                <p className="text-muted-foreground text-sm">{advantage.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="how-to-order" className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold mb-4 text-center">Как заказать справку</h3>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Простой процесс из 4 шагов
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className="relative animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <Card className="h-full">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                      {step.number}
+              {item.submenu && hoveredMenu === item.id && (
+                <div className="fixed left-[160px] top-24 bottom-0 w-[800px] bg-white shadow-2xl animate-slide-in-right z-50 overflow-y-auto">
+                  <div className="p-8">
+                    <h3 className="text-lg font-bold mb-6 text-primary uppercase">{item.title}:</h3>
+                    <div className="grid grid-cols-2 gap-x-12 gap-y-3">
+                      {item.submenu.map((subitem, idx) => (
+                        <a
+                          key={idx}
+                          href={subitem.link}
+                          className="text-foreground hover:text-primary transition-colors duration-200 py-2 text-base"
+                        >
+                          {subitem.title}
+                        </a>
+                      ))}
                     </div>
-                    <Icon name={step.icon} className="text-primary mx-auto mb-3" size={32} />
-                    <h4 className="text-lg font-semibold mb-2">{step.title}</h4>
-                    <p className="text-muted-foreground text-sm">{step.description}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
+      </div>
+
+      <div className="ml-[160px]">
+        <header className="bg-white shadow-sm sticky top-0 z-30">
+          <div className="container mx-auto px-8 py-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-8 text-sm">
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <Icon name="MapPin" size={16} />
+                  <span className="font-medium">Ваш город:</span>
+                  <span className="text-primary font-semibold underline cursor-pointer">Москва</span>
+                </div>
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <Icon name="Mail" size={16} />
+                  <span>Email:</span>
+                  <a href="mailto:info@meddocument.ru" className="text-primary font-semibold">
+                    info@meddocument.ru
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <a href="tel:+79851234567" className="text-2xl font-bold text-foreground hover:text-primary transition-colors">
+                  +7 (985) 123-45-67
+                </a>
+                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-6">
+                  ПОЗВОНИТЕ МНЕ
+                </Button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section className="relative py-20 overflow-hidden">
+          <div className="container mx-auto px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="animate-fade-in">
+                <div className="inline-block mb-4">
+                  <svg className="w-16 h-2" viewBox="0 0 100 10">
+                    <path d="M0,5 Q25,0 50,5 T100,5" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary" />
+                  </svg>
+                </div>
+                <h1 className="text-5xl font-bold mb-6 leading-tight">
+                  СПРАВКИ И МЕДКНИЖКИ
+                  <br />
+                  <span className="text-primary">БЫСТРО И ОФИЦИАЛЬНО</span>
+                </h1>
+                <div className="bg-secondary text-secondary-foreground inline-block px-4 py-2 font-bold text-lg mb-6">
+                  100% ПРОХОЖДЕНИЕ ПРОВЕРОК
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  Конфиденциальность, оригинальные документы от действующих организаций,
+                  быстрая доставка, низкая стоимость, отсутствие предоплаты
+                </p>
+                <div className="flex gap-4">
+                  <Button size="lg" className="px-8">
+                    <Icon name="FileText" className="mr-2" size={20} />
+                    Заказать справку
+                  </Button>
+                  <Button size="lg" variant="outline" className="px-8">
+                    <Icon name="Phone" className="mr-2" size={20} />
+                    Позвонить
+                  </Button>
+                </div>
+              </div>
+
+              <div className="relative animate-scale-in">
+                <img 
+                  src="https://cdn.poehali.dev/files/1-й скриншот.png"
+                  alt="Медицинские справки"
+                  className="rounded-lg shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-8">
+            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+              {advantages.map((advantage, index) => (
+                <Card
+                  key={index}
+                  className="text-center hover:shadow-lg transition-shadow duration-300 animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon name={advantage.icon} className="text-primary" size={32} />
+                    </div>
+                    <h4 className="font-bold mb-2">{advantage.title}</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{advantage.description}</p>
                   </CardContent>
                 </Card>
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2">
-                    <Icon name="ArrowRight" className="text-muted-foreground" size={24} />
-                  </div>
-                )}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="reviews" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold mb-12 text-center">Отзывы наших клиентов</h3>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {reviews.map((review, index) => (
-              <Card
-                key={index}
-                className="animate-fade-in"
-                style={{ animationDelay: `${index * 0.15}s` }}
-              >
-                <CardContent className="p-6">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Icon key={i} name="Star" className="text-yellow-400 fill-yellow-400" size={18} />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mb-4 text-sm">{review.text}</p>
-                  <p className="font-semibold text-sm">{review.name}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gradient-to-br from-primary to-accent">
-        <div className="container mx-auto px-4">
-          <div className="max-w-xl mx-auto">
-            <Card className="animate-scale-in">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-2 text-center">Оставьте заявку</h3>
-                <p className="text-muted-foreground text-center mb-6">
-                  Мы свяжемся с вами в течение 10 минут
-                </p>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
+        <section className="py-20 bg-gradient-to-br from-primary to-primary/80">
+          <div className="container mx-auto px-8">
+            <div className="max-w-xl mx-auto">
+              <Card className="animate-scale-in">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold mb-2 text-center">Оставьте заявку</h3>
+                  <p className="text-muted-foreground text-center mb-6">
+                    Мы свяжемся с вами в течение 10 минут
+                  </p>
+                  <form onSubmit={handleSubmit} className="space-y-4">
                     <Input
                       type="text"
                       placeholder="Ваше имя"
@@ -388,8 +268,6 @@ export default function Index() {
                       required
                       className="h-12"
                     />
-                  </div>
-                  <div>
                     <Input
                       type="tel"
                       placeholder="Ваш телефон"
@@ -398,68 +276,68 @@ export default function Index() {
                       required
                       className="h-12"
                     />
-                  </div>
-                  <Button type="submit" size="lg" className="w-full">
-                    <Icon name="Send" className="mr-2" size={20} />
-                    Отправить заявку
-                  </Button>
-                </form>
-                <p className="text-xs text-muted-foreground text-center mt-4">
-                  Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
-                </p>
-              </CardContent>
-            </Card>
+                    <Button type="submit" size="lg" className="w-full bg-secondary hover:bg-secondary/90">
+                      <Icon name="Send" className="mr-2" size={20} />
+                      Отправить заявку
+                    </Button>
+                  </form>
+                  <p className="text-xs text-muted-foreground text-center mt-4">
+                    Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <footer className="bg-foreground text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                  <Icon name="Cross" className="text-white" size={24} />
+        <footer id="contacts" className="bg-foreground text-white py-12">
+          <div className="container mx-auto px-8">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
+                    <Icon name="Cross" className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg">МедДокумент</h4>
+                    <p className="text-xs text-muted">Справки и медкнижки</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-lg">МедДокумент</h4>
-                  <p className="text-xs text-muted">Справки и медкнижки</p>
+                <p className="text-sm text-muted">
+                  Лицензированная медицинская организация
+                </p>
+              </div>
+              <div>
+                <h5 className="font-semibold mb-4">Контакты</h5>
+                <div className="space-y-2 text-sm text-muted">
+                  <p className="flex items-center gap-2">
+                    <Icon name="Phone" size={16} />
+                    +7 (985) 123-45-67
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <Icon name="Mail" size={16} />
+                    info@meddocument.ru
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <Icon name="MapPin" size={16} />
+                    Москва, ул. Примерная, д. 1
+                  </p>
                 </div>
               </div>
-              <p className="text-sm text-muted">
-                Лицензированная медицинская организация
-              </p>
-            </div>
-            <div>
-              <h5 className="font-semibold mb-4">Контакты</h5>
-              <div className="space-y-2 text-sm text-muted">
-                <p className="flex items-center gap-2">
-                  <Icon name="Phone" size={16} />
-                  +7 (495) 123-45-67
-                </p>
-                <p className="flex items-center gap-2">
-                  <Icon name="Mail" size={16} />
-                  info@meddocument.ru
-                </p>
-                <p className="flex items-center gap-2">
-                  <Icon name="MapPin" size={16} />
-                  Москва, ул. Примерная, д. 1
-                </p>
+              <div>
+                <h5 className="font-semibold mb-4">Режим работы</h5>
+                <div className="space-y-2 text-sm text-muted">
+                  <p>Пн-Пт: 9:00 - 20:00</p>
+                  <p>Сб-Вс: 10:00 - 18:00</p>
+                </div>
               </div>
             </div>
-            <div>
-              <h5 className="font-semibold mb-4">Режим работы</h5>
-              <div className="space-y-2 text-sm text-muted">
-                <p>Пн-Пт: 9:00 - 20:00</p>
-                <p>Сб-Вс: 10:00 - 18:00</p>
-              </div>
+            <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-muted">
+              <p>© 2024 МедДокумент. Все права защищены.</p>
             </div>
           </div>
-          <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-muted">
-            <p>© 2024 МедДокумент. Все права защищены.</p>
-          </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 }
