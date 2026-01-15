@@ -218,7 +218,13 @@ export default function Index() {
         </header>
 
         <section className="relative py-20 overflow-hidden">
-          <div className="container mx-auto px-8">
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-10"
+            style={{ backgroundImage: 'url(https://cdn.poehali.dev/projects/c7782af7-a763-40b2-802f-73b245e1575d/files/f3453abe-2832-4975-ba4d-748bc0009b0b.jpg)' }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/80"></div>
+          
+          <div className="container mx-auto px-8 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
                 <div className="inline-block mb-4">
