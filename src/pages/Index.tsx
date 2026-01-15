@@ -250,6 +250,114 @@ export default function Index() {
           </div>
         </section>
 
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+          <div className="container mx-auto px-8">
+            <h2 className="text-5xl font-bold mb-12">
+              КУПИТЬ СПРАВКИ <span className="text-primary">В МОСКВЕ</span>
+            </h2>
+            
+            <div className="max-w-5xl">
+              <p className="text-lg leading-relaxed mb-6 text-foreground">
+                Компания «МедДокумент» специализируется на изготовлении, оформлении и печати медицинских справок в Москве любой сложности! Предлагая высокое качество услуг и ответственный подход к каждому заказу. При заказе справки в Москве мы гарантируем успешное прохождение проверки через специальные приложения, так как изготавливаем подлинные медицинские справки в Москве для отчетности и оптимизации НДС. Приобретая у нас справки в Москве, вы гарантированно получите:
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={24} />
+                  <p className="text-lg">Оригинальные медицинские справки в Москве и документы от действующих медицинских организаций;</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={24} />
+                  <p className="text-lg">100% гарантия подлинности – изготавливаем справки в Москве, на 100% идентичные оригиналам с корректным QR кодом;</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={24} />
+                  <p className="text-lg">Конфиденциальность – гарантируем сохранность личной информации заказчиков;</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={24} />
+                  <p className="text-lg">Возможность выбора даты заказчиком – при заказе справки в Москве можем оформить документ с текущим или задним числом;</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={24} />
+                  <p className="text-lg">Низкая стоимость справок в Москве - у нас очень конкурентные цены на справки в Москве;</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={24} />
+                  <p className="text-lg">Быстрая доставка – оперативно доставляем справки курьером и транспортными компаниями по России;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-8">
+            <h2 className="text-5xl font-bold text-center mb-4">
+              СТОИМОСТЬ СПРАВОК <span className="text-primary">В МОСКВЕ:</span>
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-8 mt-16">
+              <Card className="overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <div className="bg-primary/5 p-6 aspect-[4/3] flex items-center justify-center">
+                  <img 
+                    src="https://cdn.poehali.dev/files/4-й скриншот.png"
+                    alt="Справки малой стоимости"
+                    className="w-full h-full object-cover rounded"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-4">Справки на сумму 500 - 1 500 руб.</h3>
+                  <div className="bg-primary text-primary-foreground text-center py-3 px-6 text-2xl font-bold mb-4">
+                    от 800 руб.
+                  </div>
+                  <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold py-6 text-lg">
+                    ЗАКАЗАТЬ ЭТУ УСЛУГУ
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <div className="bg-primary/5 p-6 aspect-[4/3] flex items-center justify-center">
+                  <img 
+                    src="https://cdn.poehali.dev/files/4-й скриншот.png"
+                    alt="Справки средней стоимости"
+                    className="w-full h-full object-cover rounded"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-4">Справки на сумму 1 500 - 3 000 руб.</h3>
+                  <div className="bg-primary text-primary-foreground text-center py-3 px-6 text-2xl font-bold mb-4">
+                    от 1 200 руб.
+                  </div>
+                  <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold py-6 text-lg">
+                    ЗАКАЗАТЬ ЭТУ УСЛУГУ
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <div className="bg-primary/5 p-6 aspect-[4/3] flex items-center justify-center">
+                  <img 
+                    src="https://cdn.poehali.dev/files/4-й скриншот.png"
+                    alt="Справки высокой стоимости"
+                    className="w-full h-full object-cover rounded"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-4">Справки на сумму 3 000 - 5 000 руб.</h3>
+                  <div className="bg-primary text-primary-foreground text-center py-3 px-6 text-2xl font-bold mb-4">
+                    от 1 800 руб.
+                  </div>
+                  <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold py-6 text-lg">
+                    ЗАКАЗАТЬ ЭТУ УСЛУГУ
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         <section className="py-20 bg-gradient-to-br from-primary to-primary/80">
           <div className="container mx-auto px-8">
             <div className="max-w-xl mx-auto">
