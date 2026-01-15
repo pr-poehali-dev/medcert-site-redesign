@@ -358,6 +358,170 @@ export default function Index() {
           </div>
         </section>
 
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-24">
+            <svg viewBox="0 0 1440 100" className="w-full h-full" preserveAspectRatio="none">
+              <path d="M0,50 Q360,20 720,50 T1440,50 L1440,0 L0,0 Z" fill="currentColor" className="text-gray-100" />
+            </svg>
+          </div>
+
+          <div className="container mx-auto px-8 relative">
+            <h2 className="text-5xl font-bold mb-4">
+              ЧТО НУЖНО, ЧТОБЫ <span className="text-primary">КУПИТЬ СПРАВКИ В МОСКВЕ?</span>
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-6 mt-16">
+              <Card className="bg-white hover:shadow-xl transition-shadow duration-300">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-foreground rounded-lg flex items-center justify-center mb-6">
+                    <Icon name="Building2" className="text-white" size={32} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-4">Оформление Заявки</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Прием заявления и подготовка требуемого медицинского документа
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white hover:shadow-xl transition-shadow duration-300">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-foreground rounded-lg flex items-center justify-center mb-6">
+                    <Icon name="ClipboardList" className="text-white" size={32} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-4">Консультация Клиента</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Определяем требования и рассчитываем стоимость услуги
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white hover:shadow-xl transition-shadow duration-300">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-foreground rounded-lg flex items-center justify-center mb-6">
+                    <Icon name="Calendar" className="text-white" size={32} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-4">Изготовление Справок</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Создание медицинского документа при помощи специализированного оборудования
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white hover:shadow-xl transition-shadow duration-300">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-foreground rounded-lg flex items-center justify-center mb-6">
+                    <Icon name="GraduationCap" className="text-white" size={32} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-4">Проверка нашей Работы</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Осуществление контроля и подтверждение соответствия медицинской справки нормативам
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white hover:shadow-xl transition-shadow duration-300">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-foreground rounded-lg flex items-center justify-center mb-6">
+                    <Icon name="CreditCard" className="text-white" size={32} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-4">Оплата и доставка</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Оплата и выбор варианта доставки справки и отчетных документов
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white hover:shadow-xl transition-shadow duration-300">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-foreground rounded-lg flex items-center justify-center mb-6">
+                    <Icon name="BadgeCheck" className="text-white" size={32} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-4">Сдача в бухгалтерию</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Доставка медицинской отчетности в бухгалтерский отдел или налоговую инспекцию
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-primary text-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 right-10 w-96 h-96 border-4 border-white rounded-full"></div>
+            <div className="absolute bottom-10 left-10 w-64 h-64 border-4 border-white rounded-full"></div>
+          </div>
+
+          <div className="container mx-auto px-8 relative z-10">
+            <h2 className="text-5xl font-bold mb-4">
+              КАК СДЕЛАТЬ ЗАКАЗ?
+            </h2>
+            <div className="bg-secondary text-secondary-foreground inline-block px-6 py-2 font-bold text-xl mb-12">
+              ВЫПОЛНИТЬ 4 ПРОСТЫХ ШАГА
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+                <img 
+                  src="https://cdn.poehali.dev/files/6-й скриншот.png"
+                  alt="Образец справки"
+                  className="w-full rounded-lg shadow-2xl"
+                />
+              </div>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-6">
+                  <div className="w-20 h-20 bg-white text-foreground rounded-lg flex items-center justify-center text-4xl font-bold flex-shrink-0">
+                    1
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">Онлайн заявка или телефонный звонок</h3>
+                    <p className="text-lg text-white/80">
+                      Свяжитесь с нами любым удобным способом - через форму на сайте или по телефону
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-6">
+                  <div className="w-20 h-20 bg-white text-foreground rounded-lg flex items-center justify-center text-4xl font-bold flex-shrink-0">
+                    2
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">Согласование и уточнение деталей</h3>
+                    <p className="text-lg text-white/80">
+                      Наш специалист уточнит все детали и рассчитает стоимость
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-6">
+                  <div className="w-20 h-20 bg-white text-foreground rounded-lg flex items-center justify-center text-4xl font-bold flex-shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">Быстрая доставка в удобное время</h3>
+                    <p className="text-lg text-white/80">
+                      Доставим справку курьером в любое удобное для вас время и место
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-6">
+                  <div className="w-20 h-20 bg-white text-foreground rounded-lg flex items-center justify-center text-4xl font-bold flex-shrink-0">
+                    4
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">Оплата после получения и проверки</h3>
+                    <p className="text-lg text-white/80">
+                      Оплачиваете только после получения и проверки документа
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-20 bg-gradient-to-br from-primary to-primary/80">
           <div className="container mx-auto px-8">
             <div className="max-w-xl mx-auto">
