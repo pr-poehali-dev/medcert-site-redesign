@@ -674,50 +674,92 @@ export default function Index() {
           </div>
         </section>
 
-        <footer id="contacts" className="bg-foreground text-white py-12">
+        <footer id="contacts" className="bg-white py-16 border-t border-gray-200">
           <div className="container mx-auto px-8">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
-                    <Icon name="Cross" className="text-white" size={24} />
-                  </div>
+            <div className="flex flex-wrap items-center justify-between mb-12 pb-8 border-b border-gray-200">
+              <h3 className="text-3xl font-bold mb-4 md:mb-0">МEDDОКУМЕНТ</h3>
+              
+              <div className="flex items-center gap-8">
+                <div className="flex items-center gap-3">
+                  <Icon name="MapPin" size={24} />
                   <div>
-                    <h4 className="font-bold text-lg">МедДокумент</h4>
-                    <p className="text-xs text-muted">Справки и медкнижки</p>
+                    <p className="text-sm text-muted-foreground">Ваш город:</p>
+                    <p className="font-bold text-primary text-lg">Москва</p>
                   </div>
                 </div>
-                <p className="text-sm text-muted">
-                  Лицензированная медицинская организация
-                </p>
-              </div>
-              <div>
-                <h5 className="font-semibold mb-4">Контакты</h5>
-                <div className="space-y-2 text-sm text-muted">
-                  <p className="flex items-center gap-2">
-                    <Icon name="Phone" size={16} />
-                    +7 (985) 123-45-67
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <Icon name="Mail" size={16} />
-                    info@meddocument.ru
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <Icon name="MapPin" size={16} />
-                    Москва, ул. Примерная, д. 1
-                  </p>
+
+                <div className="flex items-center gap-3">
+                  <Icon name="Mail" size={24} />
+                  <div>
+                    <p className="text-sm text-muted-foreground">Email:</p>
+                    <a href="mailto:express.spravki@gmail.com" className="font-bold text-lg hover:text-primary transition-colors">
+                      express.spravki@gmail.com
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <h5 className="font-semibold mb-4">Режим работы</h5>
-                <div className="space-y-2 text-sm text-muted">
-                  <p>Пн-Пт: 9:00 - 20:00</p>
-                  <p>Сб-Вс: 10:00 - 18:00</p>
+
+                <div>
+                  <a href="tel:+79853143399" className="text-2xl font-bold hover:text-primary transition-colors">
+                    +7 (985) 314-33-99
+                  </a>
                 </div>
+
+                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold px-8 border-2 border-secondary">
+                  ПОЗВОНИТЕ МНЕ
+                </Button>
               </div>
             </div>
-            <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-muted">
-              <p>© 2024 МедДокумент. Все права защищены.</p>
+
+            <div className="grid md:grid-cols-4 gap-12">
+              <div>
+                <h4 className="text-xl font-bold mb-6 uppercase">Справки:</h4>
+                <ul className="space-y-3">
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Справка 086/у</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Справка для ГИБДД</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Справка 095/у</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Справка в бассейн</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Справка на оружие</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Справка для работы</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Справка в спортзал</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-bold mb-6 uppercase">Медкнижки:</h4>
+                <ul className="space-y-3">
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Личная медкнижка</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Для общепита</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Для торговли</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Для медработников</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Для образования</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Продление медкнижки</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-bold mb-6 uppercase">Медосмотры:</h4>
+                <ul className="space-y-3">
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Медосмотр для работы</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Медосмотр для водителей</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Медосмотр для студентов</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Анализы</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Флюорография</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Прививки</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Консультации врачей</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-bold mb-6 uppercase">Дополнительные услуги:</h4>
+                <ul className="space-y-3">
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Оформление документов</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Срочное изготовление</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Доставка документов</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Консультация специалиста</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Проверка подлинности</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Продление справок</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </footer>
