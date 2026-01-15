@@ -188,15 +188,15 @@ export default function Index() {
 
       <div className="ml-[160px]">
         <header className="bg-white shadow-sm sticky top-0 z-30">
-          <div className="container mx-auto px-8 py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-8 text-sm">
+          <div className="container mx-auto px-4 md:px-8 py-3 md:py-4">
+            <div className="flex items-center justify-between flex-wrap gap-3">
+              <div className="flex items-center gap-3 md:gap-8 text-xs md:text-sm flex-wrap">
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Icon name="MapPin" size={16} />
-                  <span className="font-medium">Ваш город:</span>
+                  <span className="font-medium hidden sm:inline">Ваш город:</span>
                   <span className="text-primary font-semibold underline cursor-pointer">Москва</span>
                 </div>
-                <div className="flex items-center gap-2 text-muted-foreground">
+                <div className="hidden md:flex items-center gap-2 text-muted-foreground">
                   <Icon name="Mail" size={16} />
                   <span>Email:</span>
                   <a href="mailto:info@meddocument.ru" className="text-primary font-semibold">
@@ -205,11 +205,11 @@ export default function Index() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <a href="tel:+79851234567" className="text-2xl font-bold text-foreground hover:text-primary transition-colors">
+              <div className="flex items-center gap-2 md:gap-4">
+                <a href="tel:+79851234567" className="text-lg md:text-2xl font-bold text-foreground hover:text-primary transition-colors">
                   +7 (985) 123-45-67
                 </a>
-                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-6">
+                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-3 md:px-6 text-sm md:text-base">
                   ПОЗВОНИТЕ МНЕ
                 </Button>
               </div>
@@ -217,46 +217,46 @@ export default function Index() {
           </div>
         </header>
 
-        <section className="relative py-20 overflow-hidden">
+        <section className="relative py-12 md:py-20 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-10"
+            className="absolute inset-0 bg-cover bg-center opacity-30"
             style={{ backgroundImage: 'url(https://cdn.poehali.dev/projects/c7782af7-a763-40b2-802f-73b245e1575d/files/f3453abe-2832-4975-ba4d-748bc0009b0b.jpg)' }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/70"></div>
           
-          <div className="container mx-auto px-8 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="container mx-auto px-4 md:px-8 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="animate-fade-in">
                 <div className="inline-block mb-4">
-                  <svg className="w-16 h-2" viewBox="0 0 100 10">
+                  <svg className="w-12 md:w-16 h-2" viewBox="0 0 100 10">
                     <path d="M0,5 Q25,0 50,5 T100,5" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary" />
                   </svg>
                 </div>
-                <h1 className="text-5xl font-bold mb-6 leading-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight">
                   СПРАВКИ И МЕДКНИЖКИ
                   <br />
                   <span className="text-primary">БЫСТРО И ОФИЦИАЛЬНО</span>
                 </h1>
-                <div className="bg-secondary text-secondary-foreground inline-block px-4 py-2 font-bold text-lg mb-6">
+                <div className="bg-secondary text-secondary-foreground inline-block px-3 md:px-4 py-2 font-bold text-base md:text-lg mb-4 md:mb-6">
                   100% ПРОХОЖДЕНИЕ ПРОВЕРОК
                 </div>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
                   Конфиденциальность, оригинальные документы от действующих организаций,
                   быстрая доставка, низкая стоимость, отсутствие предоплаты
                 </p>
-                <div className="flex gap-4">
-                  <Button size="lg" className="px-8">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+                  <Button size="lg" className="px-6 md:px-8 w-full sm:w-auto">
                     <Icon name="FileText" className="mr-2" size={20} />
                     Заказать справку
                   </Button>
-                  <Button size="lg" variant="outline" className="px-8">
+                  <Button size="lg" variant="outline" className="px-6 md:px-8 w-full sm:w-auto">
                     <Icon name="Phone" className="mr-2" size={20} />
                     Позвонить
                   </Button>
                 </div>
               </div>
 
-              <div className="relative animate-scale-in">
+              <div className="relative animate-scale-in hidden lg:block">
                 <img 
                   src="https://cdn.poehali.dev/files/1-й скриншот.png"
                   alt="Медицинские справки"
@@ -267,9 +267,9 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-8">
-            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <section className="py-12 md:py-16 bg-white">
+          <div className="container mx-auto px-4 md:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
               {advantages.map((advantage, index) => (
                 <Card
                   key={index}
@@ -289,9 +289,9 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-          <div className="container mx-auto px-8">
-            <h2 className="text-5xl font-bold mb-12">
+        <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 to-white">
+          <div className="container mx-auto px-4 md:px-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12">
               КУПИТЬ СПРАВКИ <span className="text-primary">В МОСКВЕ</span>
             </h2>
             
@@ -330,13 +330,13 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-8">
-            <h2 className="text-5xl font-bold text-center mb-4">
+        <section className="py-12 md:py-20 bg-white">
+          <div className="container mx-auto px-4 md:px-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">
               СТОИМОСТЬ СПРАВОК <span className="text-primary">В МОСКВЕ:</span>
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-8 mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-16">
               <Card className="overflow-hidden hover:shadow-2xl transition-shadow duration-300">
                 <div className="bg-primary/5 p-6 aspect-[4/3] flex items-center justify-center">
                   <img 
@@ -397,19 +397,19 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-24">
+        <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-16 md:h-24 hidden md:block">
             <svg viewBox="0 0 1440 100" className="w-full h-full" preserveAspectRatio="none">
               <path d="M0,50 Q360,20 720,50 T1440,50 L1440,0 L0,0 Z" fill="currentColor" className="text-gray-100" />
             </svg>
           </div>
 
-          <div className="container mx-auto px-8 relative">
-            <h2 className="text-5xl font-bold mb-4">
+          <div className="container mx-auto px-4 md:px-8 relative">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
               ЧТО НУЖНО, ЧТОБЫ <span className="text-primary">КУПИТЬ СПРАВКИ В МОСКВЕ?</span>
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-6 mt-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-16">
               <Card className="bg-white hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-foreground rounded-lg flex items-center justify-center mb-6">
@@ -485,22 +485,22 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="py-20 bg-primary text-white relative overflow-hidden">
+        <section className="py-12 md:py-20 bg-primary text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 right-10 w-96 h-96 border-4 border-white rounded-full"></div>
             <div className="absolute bottom-10 left-10 w-64 h-64 border-4 border-white rounded-full"></div>
           </div>
 
-          <div className="container mx-auto px-8 relative z-10">
-            <h2 className="text-5xl font-bold mb-4">
+          <div className="container mx-auto px-4 md:px-8 relative z-10">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
               КАК СДЕЛАТЬ ЗАКАЗ?
             </h2>
-            <div className="bg-secondary text-secondary-foreground inline-block px-6 py-2 font-bold text-xl mb-12">
+            <div className="bg-secondary text-secondary-foreground inline-block px-4 md:px-6 py-2 font-bold text-base md:text-xl mb-8 md:mb-12">
               ВЫПОЛНИТЬ 4 ПРОСТЫХ ШАГА
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-8 order-2 lg:order-1">
                 <img 
                   src="https://cdn.poehali.dev/files/6-й скриншот.png"
                   alt="Образец справки"
@@ -508,7 +508,7 @@ export default function Index() {
                 />
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6 order-1 lg:order-2">
                 <div className="flex items-start gap-6">
                   <div className="w-20 h-20 bg-white text-foreground rounded-lg flex items-center justify-center text-4xl font-bold flex-shrink-0">
                     1
@@ -521,37 +521,37 @@ export default function Index() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-6">
-                  <div className="w-20 h-20 bg-white text-foreground rounded-lg flex items-center justify-center text-4xl font-bold flex-shrink-0">
+                <div className="flex items-start gap-3 md:gap-6">
+                  <div className="w-14 h-14 md:w-20 md:h-20 bg-white text-foreground rounded-lg flex items-center justify-center text-2xl md:text-4xl font-bold flex-shrink-0">
                     2
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">Согласование и уточнение деталей</h3>
-                    <p className="text-lg text-white/80">
+                    <h3 className="text-lg md:text-2xl font-bold mb-2">Согласование и уточнение деталей</h3>
+                    <p className="text-sm md:text-lg text-white/80">
                       Наш специалист уточнит все детали и рассчитает стоимость
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-6">
-                  <div className="w-20 h-20 bg-white text-foreground rounded-lg flex items-center justify-center text-4xl font-bold flex-shrink-0">
+                <div className="flex items-start gap-3 md:gap-6">
+                  <div className="w-14 h-14 md:w-20 md:h-20 bg-white text-foreground rounded-lg flex items-center justify-center text-2xl md:text-4xl font-bold flex-shrink-0">
                     3
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">Быстрая доставка в удобное время</h3>
-                    <p className="text-lg text-white/80">
+                    <h3 className="text-lg md:text-2xl font-bold mb-2">Быстрая доставка в удобное время</h3>
+                    <p className="text-sm md:text-lg text-white/80">
                       Доставим справку курьером в любое удобное для вас время и место
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-6">
-                  <div className="w-20 h-20 bg-white text-foreground rounded-lg flex items-center justify-center text-4xl font-bold flex-shrink-0">
+                <div className="flex items-start gap-3 md:gap-6">
+                  <div className="w-14 h-14 md:w-20 md:h-20 bg-white text-foreground rounded-lg flex items-center justify-center text-2xl md:text-4xl font-bold flex-shrink-0">
                     4
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">Оплата после получения и проверки</h3>
-                    <p className="text-lg text-white/80">
+                    <h3 className="text-lg md:text-2xl font-bold mb-2">Оплата после получения и проверки</h3>
+                    <p className="text-sm md:text-lg text-white/80">
                       Оплачиваете только после получения и проверки документа
                     </p>
                   </div>
@@ -561,20 +561,20 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-          <div className="absolute top-0 left-0">
+        <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+          <div className="absolute top-0 left-0 hidden md:block">
             <svg width="150" height="80" viewBox="0 0 150 80">
               <path d="M0,40 Q25,20 50,40 T100,40 T150,40" stroke="currentColor" strokeWidth="3" fill="none" className="text-gray-300" />
             </svg>
           </div>
 
-          <div className="container mx-auto px-8 relative">
-            <h2 className="text-5xl font-bold mb-16">
+          <div className="container mx-auto px-4 md:px-8 relative">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-16">
               ОТЗЫВЫ <span className="text-primary">ПОКУПАТЕЛЕЙ</span>
             </h2>
 
             <div className="relative">
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                 {reviews.slice(currentReviewIndex, currentReviewIndex + 3).map((review, index) => (
                   <Card key={index} className="bg-white hover:shadow-xl transition-shadow duration-300">
                     <CardContent className="p-8">
@@ -611,25 +611,25 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-br from-primary/5 to-primary/10 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 rounded-bl-[100px]"></div>
+        <section className="py-12 md:py-20 bg-gradient-to-br from-primary/5 to-primary/10 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 rounded-bl-[100px] hidden lg:block"></div>
 
-          <div className="container mx-auto px-8 relative z-10">
-            <div className="absolute top-0 left-0">
+          <div className="container mx-auto px-4 md:px-8 relative z-10">
+            <div className="absolute top-0 left-0 hidden md:block">
               <svg width="150" height="80" viewBox="0 0 150 80">
                 <path d="M0,40 Q25,20 50,40 T100,40 T150,40" stroke="currentColor" strokeWidth="3" fill="none" className="text-gray-300" />
               </svg>
             </div>
 
-            <h2 className="text-5xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
               ОСТАВЬТЕ <span className="text-primary">ЗАЯВКУ:</span>
             </h2>
-            <p className="text-xl text-muted-foreground mb-12 max-w-3xl">
+            <p className="text-base md:text-xl text-muted-foreground mb-8 md:mb-12 max-w-3xl">
               Оставьте свои данные и наш менеджер ответит на все ваши вопросы, предложит лучшее решение вашего вопроса:
             </p>
 
             <form onSubmit={handleSubmit} className="max-w-5xl">
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-4">
                 <Input
                   type="tel"
                   placeholder="ТЕЛЕФОН"
@@ -680,12 +680,12 @@ export default function Index() {
           </div>
         </section>
 
-        <footer id="contacts" className="bg-white py-16 border-t border-gray-200">
-          <div className="container mx-auto px-8">
-            <div className="flex flex-wrap items-center justify-between mb-12 pb-8 border-b border-gray-200">
-              <h3 className="text-3xl font-bold mb-4 md:mb-0">МEDDОКУМЕНТ</h3>
+        <footer id="contacts" className="bg-white py-8 md:py-16 border-t border-gray-200">
+          <div className="container mx-auto px-4 md:px-8">
+            <div className="flex flex-col lg:flex-row flex-wrap items-start lg:items-center justify-between gap-4 md:gap-6 mb-8 md:mb-12 pb-6 md:pb-8 border-b border-gray-200">
+              <h3 className="text-2xl md:text-3xl font-bold">МEDDОКУМЕНТ</h3>
               
-              <div className="flex items-center gap-8">
+              <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 md:gap-8 w-full lg:w-auto">
                 <div className="flex items-center gap-3">
                   <Icon name="MapPin" size={24} />
                   <div>
@@ -716,7 +716,7 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
               <div>
                 <h4 className="text-xl font-bold mb-6 uppercase">Справки:</h4>
                 <ul className="space-y-3">
