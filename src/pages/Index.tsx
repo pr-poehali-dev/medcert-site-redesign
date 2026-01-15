@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 
 const menuItems = [
@@ -92,13 +93,45 @@ const advantages = [
   }
 ];
 
+const reviews = [
+  {
+    name: 'Наталья',
+    title: 'Сделано лучше чем ожидала!',
+    text: 'Все отлично! Получила справку 086/у — проверка в медицинском центре прошла легко. Никаких претензий к качеству. Очень довольна :)'
+  },
+  {
+    name: 'Анатолий Иванович',
+    title: 'Сделали хорошо!',
+    text: 'Работаю с Вами не первый раз. Более честной и профессиональной компании не встречал. Отличный сервис, рекомендую!'
+  },
+  {
+    name: 'Сергей',
+    title: 'Доволен как слон! Спасибо!',
+    text: 'Сегодня получил заказ. Сделали быстро, выглядит как оригинальный, проверку проходит, доставка быстрая. Спасибо большое!'
+  },
+  {
+    name: 'Елена',
+    title: 'Все прошло отлично!',
+    text: 'Заказала медкнижку для работы. Понравилось качество исполнения, все печати на месте. Обращусь еще при необходимости. Спасибо!'
+  }
+];
+
 export default function Index() {
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
-  const [formData, setFormData] = useState({ name: '', phone: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', email: '', document: '', message: '' });
+  const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+  };
+
+  const nextReviews = () => {
+    setCurrentReviewIndex((prev) => (prev + 3 >= reviews.length ? 0 : prev + 1));
+  };
+
+  const prevReviews = () => {
+    setCurrentReviewIndex((prev) => (prev === 0 ? Math.max(0, reviews.length - 3) : prev - 1));
   };
 
   return (
@@ -522,43 +555,122 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-br from-primary to-primary/80">
-          <div className="container mx-auto px-8">
-            <div className="max-w-xl mx-auto">
-              <Card className="animate-scale-in">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-2 text-center">Оставьте заявку</h3>
-                  <p className="text-muted-foreground text-center mb-6">
-                    Мы свяжемся с вами в течение 10 минут
-                  </p>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <Input
-                      type="text"
-                      placeholder="Ваше имя"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      required
-                      className="h-12"
-                    />
-                    <Input
-                      type="tel"
-                      placeholder="Ваш телефон"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      required
-                      className="h-12"
-                    />
-                    <Button type="submit" size="lg" className="w-full bg-secondary hover:bg-secondary/90">
-                      <Icon name="Send" className="mr-2" size={20} />
-                      Отправить заявку
-                    </Button>
-                  </form>
-                  <p className="text-xs text-muted-foreground text-center mt-4">
-                    Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
-                  </p>
-                </CardContent>
-              </Card>
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+          <div className="absolute top-0 left-0">
+            <svg width="150" height="80" viewBox="0 0 150 80">
+              <path d="M0,40 Q25,20 50,40 T100,40 T150,40" stroke="currentColor" strokeWidth="3" fill="none" className="text-gray-300" />
+            </svg>
+          </div>
+
+          <div className="container mx-auto px-8 relative">
+            <h2 className="text-5xl font-bold mb-16">
+              ОТЗЫВЫ <span className="text-primary">ПОКУПАТЕЛЕЙ</span>
+            </h2>
+
+            <div className="relative">
+              <div className="grid md:grid-cols-3 gap-6">
+                {reviews.slice(currentReviewIndex, currentReviewIndex + 3).map((review, index) => (
+                  <Card key={index} className="bg-white hover:shadow-xl transition-shadow duration-300">
+                    <CardContent className="p-8">
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                          <Icon name="User" className="text-gray-400" size={32} />
+                        </div>
+                        <h4 className="text-xl font-bold">{review.name}</h4>
+                      </div>
+                      <h5 className="text-lg font-bold text-secondary mb-4">{review.title}</h5>
+                      <p className="text-muted-foreground leading-relaxed">{review.text}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              <div className="flex items-center justify-center gap-4 mt-12">
+                <button
+                  onClick={prevReviews}
+                  className="w-12 h-12 bg-white border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-200"
+                  aria-label="Предыдущие отзывы"
+                >
+                  <Icon name="ChevronLeft" size={24} />
+                </button>
+                <button
+                  onClick={nextReviews}
+                  className="w-12 h-12 bg-white border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-200"
+                  aria-label="Следующие отзывы"
+                >
+                  <Icon name="ChevronRight" size={24} />
+                </button>
+              </div>
             </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-gradient-to-br from-primary/5 to-primary/10 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 rounded-bl-[100px]"></div>
+
+          <div className="container mx-auto px-8 relative z-10">
+            <div className="absolute top-0 left-0">
+              <svg width="150" height="80" viewBox="0 0 150 80">
+                <path d="M0,40 Q25,20 50,40 T100,40 T150,40" stroke="currentColor" strokeWidth="3" fill="none" className="text-gray-300" />
+              </svg>
+            </div>
+
+            <h2 className="text-5xl font-bold mb-4">
+              ОСТАВЬТЕ <span className="text-primary">ЗАЯВКУ:</span>
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12 max-w-3xl">
+              Оставьте свои данные и наш менеджер ответит на все ваши вопросы, предложит лучшее решение вашего вопроса:
+            </p>
+
+            <form onSubmit={handleSubmit} className="max-w-5xl">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+                <Input
+                  type="tel"
+                  placeholder="ТЕЛЕФОН"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  required
+                  className="h-14 bg-white border-0 text-base placeholder:text-gray-400 placeholder:font-normal"
+                />
+                <Input
+                  type="text"
+                  placeholder="ИМЯ"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
+                  className="h-14 bg-white border-0 text-base placeholder:text-gray-400 placeholder:font-normal"
+                />
+                <Input
+                  type="email"
+                  placeholder="E-MAIL"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="h-14 bg-white border-0 text-base placeholder:text-gray-400 placeholder:font-normal"
+                />
+                <Input
+                  type="text"
+                  placeholder="ДОКУМЕНТ"
+                  value={formData.document}
+                  onChange={(e) => setFormData({ ...formData, document: e.target.value })}
+                  className="h-14 bg-white border-0 text-base placeholder:text-gray-400 placeholder:font-normal"
+                />
+              </div>
+
+              <Textarea
+                placeholder="Сообщение"
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                className="mb-6 bg-white border-0 min-h-[200px] text-base placeholder:text-gray-400"
+              />
+
+              <Button 
+                type="submit" 
+                size="lg" 
+                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold px-12 py-6 text-xl border-2 border-secondary hover:border-secondary/90"
+              >
+                ОТПРАВИТЬ
+              </Button>
+            </form>
           </div>
         </section>
 
