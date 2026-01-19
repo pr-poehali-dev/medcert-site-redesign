@@ -151,7 +151,7 @@ export default function Index() {
                 <rect x="37.5" y="42.5" width="25" height="10" fill="white" rx="1"/>
               </svg>
             </div>
-            <span className="text-base font-bold text-foreground" style={{ fontFamily: 'Caveat, cursive' }}>Dr. Справкин</span>
+            <span className="text-2xl font-bold text-foreground" style={{ fontFamily: 'Caveat, cursive' }}>Dr. Справкин</span>
           </div>
         </div>
 
