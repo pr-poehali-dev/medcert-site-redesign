@@ -11,7 +11,7 @@ const menuItems = [
     title: 'СПРАВКИ',
     icon: 'FileText',
     submenu: [
-      { title: 'Справка 086/у', link: '#' },
+      { title: 'Справка 086/у', link: '/spravka-086-u' },
       { title: 'Справка для ГИБДД', link: '#' },
       { title: 'Справка 095/у', link: '#' },
       { title: 'Справка в бассейн', link: '#' },
