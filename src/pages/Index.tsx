@@ -139,10 +139,19 @@ export default function Index() {
       <div className="fixed top-0 left-0 w-[220px] h-full bg-gradient-to-b from-primary via-primary to-primary/90 z-40">
         <div className="absolute top-0 left-0 right-0 h-24 bg-white flex items-center justify-center">
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-1">
-              <Icon name="Cross" className="text-white" size={28} />
+            <div className="relative w-14 h-14 mb-1">
+              <svg viewBox="0 0 100 100" className="w-full h-full">
+                <path 
+                  d="M 10 30 Q 10 15, 25 15 L 75 15 Q 90 15, 90 30 L 85 70 Q 85 75, 80 75 L 20 75 Q 15 75, 15 70 Z" 
+                  fill="#22c55e"
+                  stroke="#16a34a"
+                  strokeWidth="2"
+                />
+                <rect x="45" y="35" width="10" height="25" fill="white" rx="1"/>
+                <rect x="37.5" y="42.5" width="25" height="10" fill="white" rx="1"/>
+              </svg>
             </div>
-            <span className="text-xs font-bold text-foreground uppercase">МедДокумент</span>
+            <span className="text-xs font-bold text-foreground uppercase">Dr. Справкин</span>
           </div>
         </div>
 
