@@ -138,7 +138,7 @@ export default function Index() {
     <div className="min-h-screen bg-gradient-to-br from-primary/5 to-primary/10">
       <div className="fixed top-0 left-0 w-[220px] h-full bg-gradient-to-b from-primary via-primary to-primary/90 z-40">
         <div className="absolute top-0 left-0 right-0 h-24 bg-white flex items-center justify-center">
-          <div className="flex flex-col items-center gap-0.5">
+          <div className="flex flex-col items-center -gap-1">
             <div className="relative w-16 h-16">
               <svg viewBox="0 0 100 100" className="w-full h-full">
                 <path 
