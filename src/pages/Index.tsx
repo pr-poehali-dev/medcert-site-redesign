@@ -136,7 +136,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 to-primary/10">
-      <div className="fixed top-0 left-0 w-[160px] h-full bg-gradient-to-b from-primary via-primary to-primary/90 z-40">
+      <div className="fixed top-0 left-0 w-[220px] h-full bg-gradient-to-b from-primary via-primary to-primary/90 z-40">
         <div className="absolute top-0 left-0 right-0 h-24 bg-white flex items-center justify-center">
           <div className="flex flex-col items-center">
             <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-1">
@@ -164,7 +164,7 @@ export default function Index() {
               </a>
 
               {item.submenu && hoveredMenu === item.id && (
-                <div className="fixed left-[160px] top-24 bottom-0 w-[800px] bg-white shadow-2xl animate-slide-in-right z-50 overflow-y-auto">
+                <div className="fixed left-[220px] top-24 bottom-0 w-[800px] bg-white shadow-2xl animate-slide-in-right z-50 overflow-y-auto">
                   <div className="p-8">
                     <h3 className="text-lg font-bold mb-6 text-primary uppercase">{item.title}:</h3>
                     <div className="grid grid-cols-2 gap-x-12 gap-y-3">
@@ -186,7 +186,7 @@ export default function Index() {
         </nav>
       </div>
 
-      <div className="ml-[160px]">
+      <div className="ml-[220px]">
         <header className="bg-white shadow-sm sticky top-0 z-30">
           <div className="container mx-auto px-4 md:px-8 py-3 md:py-4">
             <div className="flex items-center justify-between flex-wrap gap-3">
